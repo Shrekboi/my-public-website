@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Site</title>
+    <link rel="stylesheet" href="contact-page.css">
+    <!-- <script type="module" src="send-email-script.js" defer></script> -->
+    <script src="https://kit.fontawesome.com/91eb7ee8ed.js" crossorigin="anonymous" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Biryani' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav>
+                <div class="title">Shrekboi</div>
+                <div class="nav-links">
+                    <div><a href="../index.html">Home</a></div>
+                    <div><a href="/contact-page/contact.html">Contact</a></div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h3>Contact me</h3>
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Phone no. (optional)">
+                <textarea id="message" rows="4" placeholder="How could I help you?"></textarea>
+                <button id="button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+        // import { PASSWD, EMAIL } from "./cridentials.js"
+
+        function sendEmail() {
+            Email.send({
+                SecureToken: "e7043457-ee95-4e22-8fae-4bc0466955b3",
+                To: "https://shrekboi.github.io/etch-a-sketch/",
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry",
+                Body: "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+                message => {
+                    // const button = document.getElementById("button")
+                    // button.style = "background-color: red;"
+                    alert(message);
+                }
+            );
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "biryani";
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body div {
+    padding: 20px;
+}
+
+header {
+    height: 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 40px;
+    font-family: "Josefin Sans";
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.intro {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.intro img {
+    height: 400px;
+    width: 400px;
+}
+
+.intro div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div p {
+    max-width: 500px;
+}
+
+.skills {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h2 {
+    font-family: "Josefin Sans";
+}
+
+.skill-img {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 30px;
+    column-gap: 30px;
+    justify-content: center;
+}
+
+.skills h2 {
+    font-size: 40px;
+}
+
+.skill-img div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skill-img div{
+    width: 160px;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-img div img {
+    width: 160px;
+}
+
+.skill-img div:hover{
+    opacity: 0.7;
+}
+
+.fa-html5 {
+    color: rgb(255,140,0);
+}
+
+.fa-css3-alt {
+    color: rgb(82, 176, 235);
+}
+
+.fa-js {
+    color: #f7df1e;
+}
+
+.fa-react {
+    color: rgb(102, 173, 218);
+}
+
+footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer div {
+    font-weight: 900;
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+.icon {
+    font-size: 45px;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    opacity: 0.6;
+}
+ 
+
+@media only screen and (max-width: 750px) {
+    .intro {
+        flex-wrap: wrap;
+    }
+    .skill-img {
+        grid-template-columns: auto auto ;
+    }
+
+    .title {
+        font-size:30px;
+    }
+    .nav-links div a{
+        font-size: 15px;
+    }
+  }
+
