@@ -27,41 +27,19 @@
         </header>
 
         <div class="container">
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form action="https://formsubmit.co/projektitili123@gmail.com" method="post">
                 <h3>Contact me</h3>
-                <input type="text" id="name" placeholder="Your Name">
-                <input type="text" id="email" placeholder="Email">
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input type="text" name="email" id="email" placeholder="Email" required>
+                <input type="hidden" name="_next" value="https://shrekboi.github.io/my-public-website">
+
+                <input type="hidden" name="_captcha" value="false">
                 <input type="text" id="phone" placeholder="Phone no. (optional)">
-                <textarea id="message" rows="4" placeholder="How could I help you?"></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="How could I help you?"></textarea>
                 <button id="button" type="submit">Submit</button>
             </form>
         </div>
     </div>
-
-
-
-    <script>
-        // import { PASSWD, EMAIL } from "./cridentials.js"
-
-        function sendEmail() {
-            Email.send({
-                SecureToken: "e7043457-ee95-4e22-8fae-4bc0466955b3",
-                To: "https://shrekboi.github.io/etch-a-sketch/",
-                From: document.getElementById("email").value,
-                Subject: "New Contact Form Enquiry",
-                Body: "Name: " + document.getElementById("name").value
-                    + "<br> Email: " + document.getElementById("email").value
-                    + "<br> Phone no: " + document.getElementById("phone").value
-                    + "<br> Message: " + document.getElementById("message").value
-            }).then(
-                message => {
-                    // const button = document.getElementById("button")
-                    // button.style = "background-color: red;"
-                    alert(message);
-                }
-            );
-        }
-    </script>
 
 </body>
 
